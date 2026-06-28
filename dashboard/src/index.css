@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #e8edf4;
+  background: #0a0e14;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 20% 0%, #152238 0%, #0a0e14 55%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a2332;
+}
+::-webkit-scrollbar-thumb {
+  background: #3d4f66;
+  border-radius: 4px;
+}
+
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+@layer components {
+  .toggle-pill {
+    @apply px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-pointer select-none;
+  }
+  .toggle-pill-on {
+    @apply bg-white/10 border-white/25 text-white;
+  }
+  .toggle-pill-off {
+    @apply bg-transparent border-border text-muted opacity-50;
+  }
+  .data-table th {
+    @apply text-left text-xs font-semibold uppercase tracking-wider text-muted px-3 py-3 border-b border-border sticky top-0 bg-panel z-10;
+  }
+  .data-table td {
+    @apply px-3 py-2.5 text-sm border-b border-border/50 whitespace-nowrap;
+  }
+  .data-table tr:hover td {
+    @apply bg-white/[0.03];
+  }
+  .data-table tr.selected td {
+    @apply bg-white/[0.06];
+  }
+}

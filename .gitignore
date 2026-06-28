@@ -1,0 +1,54 @@
+# --- Secrets & environment ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Local data & generated outputs (re-run pipeline to recreate) ---
+abi.db
+abi.db-journal
+output.csv
+pipeline.log
+exports/
+
+# --- Dashboard (Node / Vite) ---
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.vite/
+dashboard/public/patients.json
+dashboard/public/meta.json
+
+# --- IDE & OS ---
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Misc ---
+*.log
+*.tmp
+~$*
